@@ -1,0 +1,67 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form asp-controller="Products" asp-action="Create" method="post" >
+   <div class="form-group row">
+        <label asp-for="product_name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_name" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_price" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_price" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_description" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_description" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_quantity" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_quantity" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_image" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_image" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="category_id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="category_id" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_status_id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_status_id" class="form-control" placeholder="Name">
+        </div>
+    </div>
+ 
+
+    <div class="form-group row">
+        <label asp-for="product_backlink" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_backlink" class="form-control" placeholder="Name">
+        </div>
+    </div>
+   
+    <div class="form-group row">
+        <label asp-for="product_selldate" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_selldate" class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

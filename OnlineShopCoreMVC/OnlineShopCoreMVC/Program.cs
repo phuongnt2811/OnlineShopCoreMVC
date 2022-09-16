@@ -1,7 +1,23 @@
+global using System.ComponentModel.DataAnnotations;
+global using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using OnlineShopCoreMVC.DataContext;
+using OnlineShopCoreMVC.Repository;
+using OnlineShopCoreMVC.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<IProductService, ProductRepository>();
+
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ShopDBContext>(options =>
+options.UseSqlServer(
+    builder.Configuration.GetConnectionString("MyStoreDB")
+    ));
+builder.Services.AddRazorPages();
+
 
 var app = builder.Build();
 
@@ -22,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Products}/{action=Index}/{id?}");
 
 app.Run();

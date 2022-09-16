@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopCoreMVC", "OnlineShopCoreMVC\OnlineShopCoreMVC.csproj", "{281A9A5B-AFFC-4A37-99E0-3D776F8D063E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopCoreMVC", "OnlineShopCoreMVC\OnlineShopCoreMVC.csproj", "{281A9A5B-AFFC-4A37-99E0-3D776F8D063E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
