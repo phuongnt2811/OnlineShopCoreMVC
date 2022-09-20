@@ -1,0 +1,595 @@
+﻿@model IEnumerable<Product>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | E-Shopper</title>
+    <link href="~/content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/content/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/content/css/price-range.css" rel="stylesheet">
+    <link href="~/content/css/animate.css" rel="stylesheet">
+
+    <link href="~/content/css/main.css" rel="stylesheet">
+    <link href="~/content/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="~/Content/js/html5shiv.js"></script>
+    <script src="~/Content/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="~/Content/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/content/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/content/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/content/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/content/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,800&display=swap" rel="stylesheet">
+    <style>
+        @@media only screen {
+            .media-object {
+                width: 210px;
+                height: 200px;
+            }
+        }
+    </style>
+</head><!--/head-->
+
+
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +84 393 767 515</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> hoalac@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://www.facebook.com/batmann2112/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="@Url.Action("Index","ListHome")">
+                                <img src="~/Content/images/home/logo.png" style="background-color:white" />
+                            </a>
+
+                        </div>
+                        <div class="btn-group pull-right">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="shop-menu pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="~/Cart/Index"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                @* @if (User.Identity.IsAuthenticated)
+                                {
+                                <li><a href="/UserAdmin/Index"><i class="fa fa-user"></i> Account</a></li>
+                                <li><a href="@Url.Action("Logout","Login")"><i class="fa fa-lock"></i>Logout</a></li>
+                                }
+                                else
+                                {
+                                <li><a href="@Url.Action("Login","Login")"><i class="fa fa-lock"></i> Login</a></li>
+                                }*@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="@Url.Action("Index","ListHome")" class="active">Home</a></li>
+
+                                <li><a href="@Url.Action("Index","PageProduct")">Product All</a></li>
+
+
+
+
+                                <li>
+                                    <a href="@Url.Action("Index","Blog")">Blog</a>
+
+                                </li>
+                                <li><a href="@Url.Action("Index","AboutUs")">About Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+                    {
+                        <div class="col-sm-3">
+                            <div class="search_box pull-right">
+                                <input type="search" name="search" placeholder="Search" onchange="myFunction(this.value)" />
+                            </div>
+                        </div>
+                    }
+
+                    @*@using (Html.BeginForm("Index", "ListHome", FormMethod.Get))
+                    {
+                    <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                    @Html.TextBox("search",null,(new { @placeholder = "Search" }))
+                    </div>
+                    </div>
+                    }*@
+                </div>
+            </div>
+        </div><!--/header-bottom-->
+    </header><!--/header-->
+
+    <section id="slider">
+        <!--slider-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            <li data-target="#slider-carousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                               @* @foreach (var item in Model.listSlide)
+                                {
+                                    <div class="col-sm-6">
+                                        <h1><span>E</span>-SHOPPER</h1>
+                                        <h2>@item.slide_title</h2>
+                                        <p>@item.slide_descriptions </p>
+                                        <button type="button" class="btn btn-default get" style="background-color:#FE980F "><a href="@Url.Action("Index","PageProduct")">Get it now</a></button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="~/content/images/home/@item.slide_imageslide" class="girl img-responsive" alt="" />
+                                        <img src="~/content/images/home/pricing.png" class="pricing" alt="" />
+                                    </div>
+                                    break;
+                                }*@
+
+                            </div>
+                            @*@foreach (var item in Model.listSlide.Where(n => n.slide_id > 1))
+                            {
+                                <div class="item ">
+
+                                    <div class="col-sm-6">
+                                        <h1><span>E</span>-SHOPPER</h1>
+                                        <h2>@item.slide_title</h2>
+                                        <p>@item.slide_descriptions </p>
+                                        <button type="button" class="btn btn-default get" style="background-color:#FE980F "> Get it now</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <img src="~/content/images/home/@item.slide_imageslide" class="girl img-responsive" alt="" />
+                                        <img src="~/content/images/home/pricing.png" class="pricing" alt="" />
+                                    </div>
+                                </div>
+                            }*@
+
+                        </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!--/slider-->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="left-sidebar">
+                        <h2>Category</h2>
+                        <div class="panel-group category-products" id="accordian">
+                            <!--category-productsr-->
+                            @foreach (var item in Model)
+                            {
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            @*<a href="#">@item.category_name</a>*@
+                                            @*<p> @Html.ActionLink(item.category_name, "Index", "Category", new { Id = item.category_id }, null)</p>*@
+                                            <p> <a href="/ProductByCategory/Index?Id=@item.category_id"> @item.Category.category_name</a> </p>
+                                        </h4>
+                                    </div>
+                                </div>
+                            }
+
+                        </div><!--/category-products-->
+
+                        <div class="brands_products">
+                            <!--brands_products-->
+                            <h2>Brands</h2>
+                            <div class="brands-name">
+                              @*  @foreach (var item in Model.listColor)
+                                {
+                                    <ul class="nav nav-pills nav-stacked">
+                                        <li> <p> <a href="/ProductByColor/Index?Id=@item.color_id"> @item.color_name</a> </p></li>
+
+                                    </ul>
+                                }*@
+
+                            </div>
+                        </div><!--/brands_products-->
+
+
+
+                        <div class="shipping text-center">
+                            <!--shipping-->
+                            <img src="~/content/images/home/shipping.jpg" alt="" />
+                        </div><!--/shipping-->
+
+                    </div>
+                </div>
+
+                <div class="col-sm-9 padding-right">
+                    <div class="features_items">
+                        <!--features_items-->
+                        <h2 class="title text-center">Features Items</h2>
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-sm-4">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img class="media-object" height="200px" width="200px" src="~/image/@item.product_image" />
+                                           
+                                            <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" })</h2>
+                                            <p> <h2>@item.product_price</h2></p>
+                                            <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
+                                        <div class="product-overlay">
+                                            <div class="overlay-content">
+                                                <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" })</h2>
+                                            <p> <h2>@item.product_price</h2></p>
+                                                <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="choose">
+                                        <ul class="nav nav-pills nav-justified">
+                                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                                            <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                      @*  @Html.PagedListPager(Model.listProduct, page => Url.Action("Index", new { page }))*@
+
+
+
+                    </div><!--features_items-->
+
+                    <div class="category-tab">
+                        <!--category-tab-->
+                        <div class="col-sm-12">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tshirt" data-toggle="tab">Ban Chay</a></li>
+                                <li><a href="#blazers" data-toggle="tab">Khuyen Mai</a></li>
+                                @*<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
+                                <li><a href="#kids" data-toggle="tab">Kids</a></li>
+                                <li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>*@
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" id="tshirt">
+                                @foreach (var item in Model.Take(4))
+                                {
+                                    <div class="col-sm-3">
+                                        <div class="product-image-wrapper">
+                                            <div class="single-products">
+                                                <div class="productinfo text-center">
+                                                    <img class="media-object" src="~/Content/images/product-details/product/@item.product_image" />
+                                                    <h2>@item.product_price $</h2>
+                                                    <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" }) </h2>
+                                                    <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+                            <div class="tab-pane fade" id="blazers">
+                                @foreach (var item in Model.Take(4))
+                                {
+                                    <div class="col-sm-3">
+                                        <div class="product-image-wrapper">
+                                            <div class="single-products">
+                                                <div class="productinfo text-center">
+                                                    <img class="media-object" src="~/Content/images/product-details/product/@item.product_image" />
+                                                    @*<img src="~/Content/images/home/Converse Chuck Taylor II.jpg" alt="" />*@
+                                                    <h2>@item.product_price $</h2>
+                                                    <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" }) </h2>
+                                                    <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+
+
+                        </div>
+                    </div><!--/category-tab-->
+
+                    <div class="recommended_items">
+                        <!--recommended_items-->
+
+
+                        <h2 class="title text-center">recommended items</h2>
+
+                        <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    @foreach (var item in Model.Where(x => x.product_status_id == 2).Take(3))
+                                    {
+
+
+                                        <div class="col-sm-4">
+                                            <div class="product-image-wrapper">
+                                                <div class="single-products">
+                                                    <div class="productinfo text-center">
+                                                        <img class="media-object" src="~/Content/images/product-details/product/@item.product_image" />
+                                                        @*<img src="~/Content/images/home/Converse Chuck Taylor II.jpg" alt="" />*@
+                                                        <h2>@item.product_price $</h2>
+                                                        <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" })</h2>
+                                                        <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="item">
+                                    @foreach (var item in Model.Take(3))
+                                    {
+
+
+                                        <div class="col-sm-4">
+                                            <div class="product-image-wrapper">
+                                                <div class="single-products">
+                                                    <div class="productinfo text-center">
+                                                        <img class="media-object" src="~/Content/images/product-details/product/@item.product_image" alt="" />
+                                                        <h2>@item.product_price $</h2>
+                                                        <h2>@Html.ActionLink(item.product_name, "Index", "Product", new { Id = item.product_id }, new { @style = "font-family: 'Nunito', sans-serif ; font-size: 16px ; color:black" })</h2>
+                                                        <a href="/Cart/AddItem?productId=@item.product_id&quantity=1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!--/recommended_items-->
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="companyinfo">
+                            <h2><span>FU</span>-shopper</h2>
+                            <p>NO1</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        @foreach (var item in Model.Take(4))
+                        {
+                            <div class="col-sm-3">
+
+                                <div class="video-gallery text-center">
+                                    <a href="#">
+                                        <div class="iframe-img">
+                                            <img src="~/Content/images/product-details/product/@item.product_image" />
+
+                                        </div>
+                                        <div class="overlay-icon">
+                                            <i class="fa fa-play-circle-o"></i>
+                                        </div>
+                                    </a>
+                                    <p>@item.product_name</p>
+
+                                </div>
+                            </div>
+                        }
+
+
+                        @*<div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                        <a href="#">
+                        <div class="iframe-img">
+                        <img src="~/Content/images/product-details/product/MLB LA DODGERS.jpg" />
+                        </div>
+                        <div class="overlay-icon">
+                        <i class="fa fa-play-circle-o"></i>
+                        </div>
+                        </a>
+                        <p>Circle of Hands</p>
+                        <h2>24 DEC 2014</h2>
+                        </div>
+                        </div>
+                        <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                        <a href="#">
+                        <div class="iframe-img">
+                        <img src="~/Content/images/product-details/product/Nike Air Force 1 Pixel.jpg" />
+                        </div>
+                        <div class="overlay-icon">
+                        <i class="fa fa-play-circle-o"></i>
+                        </div>
+                        </a>
+                        <p>Circle of Hands</p>
+                        <h2>24 DEC 2014</h2>
+                        </div>
+                        </div>
+                        <div class="col-sm-3">
+                        <div class="video-gallery text-center">
+                        <a href="#">
+                        <div class="iframe-img">
+                        <img src="~/Content/images/product-details/product/Reebok Pump Fury Phoenix Suns.jpg" />
+                        </div>
+                        <div class="overlay-icon">
+                        <i class="fa fa-play-circle-o"></i>
+                        </div>
+                        </a>
+                        <p>Circle of Hands</p>
+                        <h2>24 DEC 2014</h2>
+                        </div>
+                        </div>*@
+                    </div>
+                    <div class="col-sm-3 ">
+                        <div class="address">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.4855345740843!2d105.52487561493238!3d21.013249986006773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345b465a4e65fb%3A0xaae6040cfabe8fe!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBGUFQ!5e0!3m2!1svi!2s!4v1646752313959!5m2!1svi!2s"
+                                    width="240" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Sản Phẩm</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Giày Nam</a></li>
+                                <li><a href="#">Giày Nữ</a></li>
+                                <li><a href="#">Thời trang & Phụ kiện</a></li>
+                                <li><a href="#">Sale-off</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Về Công Ty</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Tuyển dụng</a></li>
+                                <li><a href="#">Liên Hệ</a></li>
+                                @*<li><a href="#">Womens</a></li>*@
+                                @*<li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Shoes</a></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Hỗ Trợ</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Bảo Mật Thông Tin</a></li>
+                                <li><a href="#">Chính Sách</a></li>
+                                <li><a href="#">Tra Cứu</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>About Shopper</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="#">Góp Ý</a></li>
+                                <li><a href="#">Hotline</a></li>
+                                <li><a href="#">0393 767 515</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1">
+                        <div class="single-widget">
+                            <h2>About Shopper</h2>
+                            <form action="#" class="searchform">
+                                <input type="text" placeholder="Your email address" />
+                                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                                <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2022 E-SHOPPER Inc. All rights reserved.</p>
+                    <p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/jquery.scrollUp.min.js"></script>
+
+    <script src="~/Content/js/price-range.js"></script>
+    <script src="~/Content/js/jquery.prettyPhoto.js"></script>
+    <script src="~/Content/js/main.js"></script>
+</body>
+</html>

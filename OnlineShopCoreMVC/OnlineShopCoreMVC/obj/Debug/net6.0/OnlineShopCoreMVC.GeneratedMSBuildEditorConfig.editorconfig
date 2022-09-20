@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Category/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Category/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Homepage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZXBhZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -23,20 +43,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Products/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Products/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Products/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Shared/Homepage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhvbWVwYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/_ViewImports.cshtml]

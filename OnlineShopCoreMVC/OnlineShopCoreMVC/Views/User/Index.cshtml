@@ -1,0 +1,104 @@
+﻿@model IEnumerable<User>
+
+@{
+    var totoalPage = ViewBag.totalPage;
+}
+<nav >
+    <div>
+        
+        <div >
+            <form asp-controller="User" asp-action="Index" class="d-flex" method="get">
+                <input class="form-control me-sm-2" name="table_search" value="@ViewBag.table_search" type="text" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<button type="button" class="btn btn-info">@Html.ActionLink("Create New", "Create")</button>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Role</th>
+            <th scope="col">Image</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Create date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var Item in Model)
+        {
+            <tr>
+                <th scope="row">@Item.user_id</th>
+                <td>
+                    @Item.username
+                </td>
+                <td>
+                    @Item.fullname
+                </td>
+                <td>
+                    @Item.user_gender
+                </td>
+                <td>
+                    @Item.user_email
+                </td>
+                <td>
+                    @Item.user_phone
+                </td>
+                <td>
+                    @Item.user_address
+                </td>
+                <td>
+                    @Item.Role.role_name
+                </td>
+                <td>
+                    <img height="100px" width="100px" src="~/image/@Item.user_image" />
+
+                </td>
+                <td>
+                    @Item.user_dob
+                </td>
+                <td>
+                    @Item.user_createdate
+                </td>
+                
+                <td>
+                    <a href="~/Products/Update/@Item.user_id"> <i class="bi bi-pencil-square"></i></a>
+                    <a href="~/Products/Delete/@Item.user_id" class="bg-danger"> <i class="bi bi-trash3"></i></a>
+                    @*<a href="~/Products/ban/@Item.user_id"> <i class="bi bi-trash3"></i></a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    <div>
+
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#">&laquo;</a>
+            </li>
+            @for (var pa = 1; pa <= totoalPage; pa++)
+            {
+                <li class="page-item">
+                    <a asp-action="Index" asp-controller="User" asp-route-page="@pa" class="page-link">@pa</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+            </li>
+        </ul>
+
+    </div>
+
+}

@@ -19,7 +19,6 @@ I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\MessagePack.Annotations.dll
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -259,3 +258,6 @@ I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\obj\Debug\net6.0\OnlineShopCoreMVC.pdb
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\obj\Debug\net6.0\OnlineShopCoreMVC.genruntimeconfig.cache
 I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\obj\Debug\net6.0\ref\OnlineShopCoreMVC.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.Build.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC\bin\Debug\net6.0\Microsoft.NET.StringTools.dll

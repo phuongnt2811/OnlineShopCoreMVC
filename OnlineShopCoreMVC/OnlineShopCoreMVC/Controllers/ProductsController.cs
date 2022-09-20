@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineShopCoreMVC.Models;
 using OnlineShopCoreMVC.Service;
+using System.Net;
 using System.Net.WebSockets;
+using System.Text.Encodings.Web;
 
 namespace OnlineShopCoreMVC.Controllers
 {
@@ -19,34 +22,83 @@ namespace OnlineShopCoreMVC.Controllers
                 page = 1;
 
             size = 10;
-            var totalItem = service.getAllProducts().Count();
+            var totalItem = service.getAll().Count();
             var totalPage = (int)Math.Ceiling((decimal)totalItem / (Decimal)size);
             var pages = new Pages(page, size, totalItem);
             ViewBag.table_search = table_search;
             ViewBag.totalPage = totalPage;
             var listProduct = service.searching(page, size, table_search);
-            return View(listProduct);
-
+            return View("Index", listProduct);
         }
-
+     
         public IActionResult Create()
         {
+            ViewBag.Category = service.getAllCategory().Select(x=> x.category_name);
+            ViewBag.category_id = new SelectList(service.getAllCategory(), "category_id", "category_name", service.getAllCategory().Select(x=> x.category_id));
+            ViewBag.productStatus_id = new SelectList(service.getAllproductStatus(), "product_status_id", "product_status_name", service.getAllproductStatus().Select(x => x.product_status_name));
+           
             return View("Create");
         }
         [HttpPost]
         public IActionResult Create(Product product)
         {
+            ViewBag.Category = service.getAllCategory();
+            service.Create(product);
+            return RedirectToAction("Index");
 
-            if (ModelState.IsValid)
+        }
+        public IActionResult Update(int? Id)
+        {
+           if(Id == null)
             {
-                service.CreateProduct(product);
-                return View("Index");
+                return NotFound();
+            }else
+            {
+                ViewBag.category_id = new SelectList(service.getAllCategory(), "category_id", "category_name", service.getAllCategory().Select(x => x.category_id));
+                ViewBag.productStatus_id = new SelectList(service.getAllproductStatus(), "product_status_id", "product_status_name", service.getAllproductStatus().Select(x => x.product_status_name));
+
+                var product = service.getById(Id);
+                if(product == null)
+                {
+                    return NotFound();
+                }
+                return View("Update", product);
+            }
+            return RedirectToAction("Index", "Products");
+        }
+        [HttpPost]
+        public IActionResult Update(Product product)
+        {
+            service.Update(product);
+            return RedirectToAction("Index", "Products");
+        }
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
             }
             else
             {
-                return View(product);
+                var product = service.getById(id);
+                ViewBag.category_id = new SelectList(service.getAllCategory(), "category_id", "category_name", service.getAllCategory().Select(x => x.category_id));
+                ViewBag.productStatus_id = new SelectList(service.getAllproductStatus(), "product_status_id", "product_status_name", service.getAllproductStatus().Select(x => x.product_status_name));
+                ViewBag.Image = product.product_image;
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                return View("Delete", product);
             }
-
+            return RedirectToAction("Index", "Products");
         }
+        [HttpPost]
+        public IActionResult Delete(Product product)
+        {
+              service.Delete(product);
+            return RedirectToAction("Index", "Products");
+        }
+
     }
 }

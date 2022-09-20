@@ -7,6 +7,8 @@
     <input class="form-control me-sm-2" name="table_search" value="@ViewBag.table_search" type="text" placeholder="Search">
     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 </form>
+
+
 @Html.ActionLink("Create New", "Create")
 <table class="table table-hover">
     <thead>
@@ -15,7 +17,12 @@
             <th scope="col">Product</th>
             <th scope="col">Price</th>
             <th scope="col">Description</th>
-            <th scope="col">selldate</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">quantity</th>
+            <th scope="col">image</th>
+            <th scope="col">category</th>
+            <th scope="col">status</th>
+            <th scope="col">backlink</th>
         </tr>
     </thead>
     <tbody>
@@ -37,9 +44,15 @@
                     @Item.product_quantity
                 </td>
                 <td>
-                    @Item.product_image
+                    <img height="100px" width="100px" src="~/image/@Item.product_image" />
+                    
                 </td>
-
+                <td>
+                    @Item.Category.category_name
+                </td>
+                <td>
+                    @Item.ProductStatus.product_status_name
+                </td>
                 <td>
                     @Item.product_selldate
                 </td>
@@ -47,25 +60,31 @@
                     @Item.product_backlink
                 </td>
                 <td>
-                    <i class="bi bi-pencil-square"><a></a></i>
-                    <i class="bi bi-trash3"><a></a></i>
+                    <a href="~/Products/Update/@Item.product_id"> <i class="bi bi-pencil-square"></i></a>
+                    <a href="~/Products/Delete/@Item.product_id"> <i class="bi bi-trash3"></i></a>
                 </td>
             </tr>
-
         }
-
     </tbody>
 </table>
 @{
     <div>
+
         <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#">&laquo;</a>
+            </li>
             @for (var pa = 1; pa <= totoalPage; pa++)
             {
                 <li class="page-item">
                     <a asp-action="Index" asp-controller="Products" asp-route-page="@pa" class="page-link">@pa</a>
                 </li>
             }
+            <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+            </li>
         </ul>
+
     </div>
 
 }

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Order>
+
+@{
+    var totoalPage = ViewBag.totalPage;
+}
+<form asp-controller="Order" asp-action="Index" class="d-flex" method="get">
+    <input class="form-control me-sm-2" name="table_search" value="@ViewBag.table_search" type="text" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+</form>
+
+
+@Html.ActionLink("Create New", "Create")
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">User</th>
+            <th scope="col">Status</th>
+            <th scope="col">Bill</th>
+            <th scope="col">Ship</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var Item in Model)
+        {
+            <tr>
+                <th scope="row">@Item.order_id</th>
+                <td>
+                    @Item.User.username
+                </td>
+                <td>
+                    @Item.OrderStatus.order_status_details
+                </td>
+                <td>
+                    @Item.total_money
+                </td>
+                <td>
+                    @Item.Ship.ship_name
+                </td>
+                <td>
+                    <a href="~/Order/Update/@Item.order_id"> <i class="bi bi-pencil-square"></i></a>
+                    <a href="~/Order/Details/@Item.order_id"> <i class="bi bi-menu-up"></i></a>
+                    <a href="~/Order/Delete/@Item.order_id"> <i class="bi bi-trash3"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@{
+    <div>
+
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#">&laquo;</a>
+            </li>
+            @for (var pa = 1; pa <= totoalPage; pa++)
+            {
+                <li class="page-item">
+                    <a asp-action="Index" asp-controller="Order" asp-route-page="@pa" class="page-link">@pa</a>
+                </li>
+            }
+            <li class="page-item">
+                <a class="page-link" href="#">&raquo;</a>
+            </li>
+        </ul>
+
+    </div>
+
+}
+@*<div>
+    <ul class="pagination">
+        <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item active">
+            <a asp-action="Index" asp-controller="Products" asp-route-page="1" class="page-link">1</a>
+        </li>
+        <li class="page-item">
+
+            <a asp-action="Index" asp-controller="Products" asp-route-page="2" class="page-link">2</a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link" href="#">5</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+        </li>
+    </ul>
+</div>*@
+
+

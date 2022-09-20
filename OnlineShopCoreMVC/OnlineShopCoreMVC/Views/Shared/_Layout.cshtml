@@ -21,16 +21,22 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" asp-controller="Homepage" asp-action="Index">
                                 Home
                                 <span class="visually-hidden">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Product</a>
+                            <a class="nav-link"  asp-controller="Products" asp-action="Index">Product</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" asp-controller="Category" asp-action="Index">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="User" asp-action="Index">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Order" asp-action="Index">Order</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>

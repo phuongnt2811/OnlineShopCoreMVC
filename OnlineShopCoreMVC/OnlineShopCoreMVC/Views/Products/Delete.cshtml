@@ -1,0 +1,76 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<form asp-controller="Products" asp-action="Delete" method="post">
+
+    <input asp-for="product_id" type="hidden" />
+    <div class="form-group row">
+        <label asp-for="product_name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_name" disabled class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_price" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_price" disabled class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_description" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_description" disabled class="form-control" placeholder="Name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_quantity" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_quantity" class="form-control" placeholder="Name">
+            <span asp-validation-for="product_quantity" disabled class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_image" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <img height="100px" width="100px"  src="~/image/@ViewBag.Image" />
+
+            <span asp-validation-for="product_image" disabled class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="category_id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <select asp-for="category_id" class="form-control" asp-items="@ViewBag.category_id" placeholder="Name"></select>
+            <span asp-validation-for="category_id" disabled class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="product_status_id" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <select asp-for="product_status_id" disabled class="form-control" asp-items="@ViewBag.productStatus_id" placeholder="Name"></select>
+            <span asp-validation-for="product_status_id"  class="text-danger"></span>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label asp-for="product_backlink" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_backlink" disabled class="form-control" placeholder="Name">
+            <span asp-validation-for="product_backlink" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="product_selldate" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-5">
+            <input asp-for="product_selldate" disabled class="form-control" placeholder="Name">
+            <span asp-validation-for="product_selldate" class="text-danger"></span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
