@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\OnlineShopCoreMVC\OnlineShopCoreMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Blogs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Blogs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Blogs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Blogs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Blogs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -73,6 +93,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/UploadFile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBsb2FkRmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [I:/Visual Code/DOTNET CORE/OnlineShopCoreMVC/OnlineShopCoreMVC/OnlineShopCoreMVC/Views/User/Index.cshtml]

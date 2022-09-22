@@ -1,0 +1,5 @@
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\Mediatr\MediatrLibrary\obj\Debug\net6.0\MediatrLibrary.csproj.AssemblyReference.cache
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\Mediatr\MediatrLibrary\obj\Debug\net6.0\MediatrLibrary.GeneratedMSBuildEditorConfig.editorconfig
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\Mediatr\MediatrLibrary\obj\Debug\net6.0\MediatrLibrary.AssemblyInfoInputs.cache
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\Mediatr\MediatrLibrary\obj\Debug\net6.0\MediatrLibrary.AssemblyInfo.cs
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\Mediatr\MediatrLibrary\obj\Debug\net6.0\MediatrLibrary.csproj.CoreCompileInputs.cache

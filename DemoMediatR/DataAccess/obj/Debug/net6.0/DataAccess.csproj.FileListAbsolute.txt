@@ -1,0 +1,12 @@
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\bin\Debug\net6.0\DataAccess.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

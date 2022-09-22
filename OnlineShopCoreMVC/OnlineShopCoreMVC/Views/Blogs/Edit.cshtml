@@ -1,0 +1,72 @@
+﻿@model OnlineShopCoreMVC.Models.Blog
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Homepage.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Blog</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="blog_id" />
+            <div class="form-group">
+                <label asp-for="blog_title" class="control-label"></label>
+                <input asp-for="blog_title" class="form-control" />
+                <span asp-validation-for="blog_title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_author" class="control-label"></label>
+                <input asp-for="blog_author" class="form-control" />
+                <span asp-validation-for="blog_author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_createdate" class="control-label"></label>
+                <input asp-for="blog_createdate" class="form-control" />
+                <span asp-validation-for="blog_createdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_createBy" class="control-label"></label>
+                <input asp-for="blog_createBy" class="form-control" />
+                <span asp-validation-for="blog_createBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_modifydate" class="control-label"></label>
+                <input asp-for="blog_modifydate" class="form-control" />
+                <span asp-validation-for="blog_modifydate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_modifyby" class="control-label"></label>
+                <input asp-for="blog_modifyby" class="form-control" />
+                <span asp-validation-for="blog_modifyby" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_backlink" class="control-label"></label>
+                <input asp-for="blog_backlink" class="form-control" />
+                <span asp-validation-for="blog_backlink" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_image" class="control-label"></label>
+                <input asp-for="blog_image" class="form-control" />
+                <span asp-validation-for="blog_image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="blog_detail" class="control-label"></label>
+                <input asp-for="blog_detail" class="form-control" />
+                <span asp-validation-for="blog_detail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

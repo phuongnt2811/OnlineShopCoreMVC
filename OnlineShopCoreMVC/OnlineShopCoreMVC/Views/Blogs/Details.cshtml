@@ -1,0 +1,73 @@
+﻿@model OnlineShopCoreMVC.Models.Blog
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/Homepage.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Blog</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_createdate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_createdate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_createBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_createBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_modifydate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_modifydate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_modifyby)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_modifyby)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_backlink)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_backlink)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_image)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_image)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.blog_detail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.blog_detail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.blog_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
