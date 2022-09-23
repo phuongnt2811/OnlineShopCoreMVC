@@ -1,7 +1,0 @@
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.csproj.AssemblyReference.cache
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.GeneratedMSBuildEditorConfig.editorconfig
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.AssemblyInfoInputs.cache
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.AssemblyInfo.cs
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.csproj.CoreCompileInputs.cache
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.MvcApplicationPartsAssemblyInfo.cs
-I:\Visual Code\DOTNET CORE\OnlineShopCoreMVC\DemoMediatR\Demo\obj\Debug\net6.0\Demo.MvcApplicationPartsAssemblyInfo.cache
